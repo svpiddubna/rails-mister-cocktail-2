@@ -1,6 +1,6 @@
 <h1>Cocktails</h1>
 <% @cocktails.each do |cocktail| %>
-<p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+<p><%= image_tag cocktail.photo.url(:bright_face) %> <%= link_to cocktail.name, cocktail_path(cocktail) %></p>
 <% end %>
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name %>
